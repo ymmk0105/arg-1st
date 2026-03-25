@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>導入記録 | 失踪記録保管庫</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="intro">
+  <main class="page">
+    <header class="site-header compact">
+      <div>
+        <p class="status-line">record / intro</p>
+        <h1 class="page-title">導入記録</h1>
+      </div>
+      <nav class="archive-nav">
+        <a href="index.html">トップへ戻る</a>
+      </nav>
+    </header>
+
+    <section class="panel">
+      <p>
+        橘ユウに関する最初の保管記録。調査はここから始まったが、本文には不自然な改行が残されている。
+        そのまま読むと意味は通る。しかし、誰かがあえて切り分けたようにも見える。
+      </p>
+      <div class="acrostic" aria-label="導入ログ本文">
+        <p><span class="initial">な</span>にかがおかしい、と最初の記録者は書き残した。</p>
+        <p><span class="initial">ぞ</span>っとするほど静かなのに、欠けた行だけが目につく。</p>
+        <p><span class="initial">し</span>らべていくほど、誰かが痕跡を並べ替えた気配が強くなる。</p>
+        <p><span class="initial">ろ</span>ぐの先頭だけが、妙にはっきり読めた。</p>
+      </div>
+    </section>
+
+    <section class="puzzle-box">
+      <h2>記録の復元 01</h2>
+      <p>不自然な行分割から拾える語を入力してください。</p>
+      <form
+        class="form-block"
+        data-puzzle-form
+        data-answer="なぞしろ|NAZOSHIRO"
+        data-reveal="#intro-next"
+        data-success-key="puzzle1-solved"
+        data-success-message="一致しました。次の記録への参照が復元されました。"
+        data-error-message="違います。本文の“最初”に注目してください。"
+      >
+        <label class="field-label" for="intro-answer">復元した語</label>
+        <input id="intro-answer" name="intro-answer" type="text" placeholder="例: 英字またはひらがな">
+        <p class="helper">補助: 行の先頭に見えている文字だけでも、意味のある語になります。</p>
+        <div class="button-row">
+          <button type="submit">照合する</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </form>
+
+      <div data-hints>
+        <button type="button" class="secondary" data-show-hint>ヒントを見る</button>
+        <div class="hint-panel">
+          <p class="hidden" data-hint-step>ヒント1: 行の頭は他より少し目立っています。</p>
+          <p class="hidden" data-hint-step>ヒント2: 上から順に先頭文字を読むと4文字の語になります。</p>
+          <p class="hidden" data-hint-step>ヒント3: 答えは「なぞしろ」です。英字なら `NAZOSHIRO` でも通ります。</p>
+        </div>
+      </div>
+
+      <div id="intro-next" class="hidden">
+        <div class="button-row">
+          <a class="button" href="case-file.html">調査ログへ進む</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

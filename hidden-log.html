@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>深層ログ | 失踪記録保管庫</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="hidden-log">
+  <main class="page">
+    <header class="site-header compact">
+      <div>
+        <p class="status-line">record / hidden-log</p>
+        <h1 class="page-title">深層ログ</h1>
+      </div>
+      <nav class="archive-nav">
+        <a href="archive.html">アーカイブへ戻る</a>
+      </nav>
+    </header>
+
+    <section class="panel">
+      <p>
+        ここは通常のナビゲーションから切り離された保管領域です。
+        橘ユウ自身が残したと見られる文面があり、改ざんを避けるため記録を分割したと示されています。
+      </p>
+      <blockquote class="archive-note">
+        「消えたのではない。追跡される前に、記録をばらばらにした。
+        ここまで来たなら、散らした語をつないで復元してほしい。」
+      </blockquote>
+      <ul class="clue-list">
+        <li>導入記録で見えた語: `NAZOSHIRO`</li>
+        <li>ケースファイルで見えた語: `KAKUSARETA`</li>
+        <li>空白の先に、このページがあった</li>
+      </ul>
+    </section>
+
+    <section class="puzzle-box">
+      <h2>記録の復元 03</h2>
+      <p>ここまでの情報をつなぎ、復元コードを入力してください。</p>
+      <form
+        class="form-block"
+        data-puzzle-form
+        data-answer="NAZOSHIROKAKUSARETA"
+        data-reveal="#hidden-next"
+        data-success-key="puzzle4-solved"
+        data-success-message="復元完了。最終記録への扉が開きました。"
+        data-error-message="一致しません。これまでの答えを順番につなげてください。"
+      >
+        <label class="field-label" for="hidden-answer">復元コード</label>
+        <input id="hidden-answer" name="hidden-answer" type="text" placeholder="例: 連結した英字">
+        <p class="helper">補助: ここまでの答えを、見つけた順番どおりにそのままつなげます。</p>
+        <div class="button-row">
+          <button type="submit">復元する</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </form>
+
+      <div data-hints>
+        <button type="button" class="secondary" data-show-hint>ヒントを見る</button>
+        <div class="hint-panel">
+          <p class="hidden" data-hint-step>ヒント1: 新しい語を探す問題ではありません。</p>
+          <p class="hidden" data-hint-step>ヒント2: `NAZOSHIRO` と `KAKUSARETA` を順に連結します。</p>
+          <p class="hidden" data-hint-step>ヒント3: 答えは `NAZOSHIROKAKUSARETA` です。</p>
+        </div>
+      </div>
+
+      <div id="hidden-next" class="hidden">
+        <div class="button-row">
+          <a class="button" href="ending.html">最終記録を読む</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ケースファイル | 失踪記録保管庫</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="case-file">
+  <main class="page">
+    <header class="site-header compact">
+      <div>
+        <p class="status-line">record / case-file</p>
+        <h1 class="page-title">ケースファイル</h1>
+      </div>
+      <nav class="archive-nav">
+        <a href="index.html">トップ</a>
+        <a href="intro.html">導入記録</a>
+      </nav>
+    </header>
+
+    <section class="panel">
+      <p>
+        失踪前後の行動ログ。ただし表示順は日付順ではなく、管理番号も削除されています。
+        各ログには赤い一文字の印があり、これは後から追加されたものと見られます。
+      </p>
+      <p class="small">記録者メモ: 「時間は戻らない。順番を直せば、隠したかった語が出る」</p>
+    </section>
+
+    <section class="log-board" aria-label="日付の乱れたログ一覧">
+      <article class="log-entry">
+        <div class="log-top">
+          <span class="date">03/07</span>
+          <span class="code-chip" aria-label="文字 R">R</span>
+        </div>
+        <p>対象者は同じ通路を二度見たあと、足を止めず奥へ向かった。</p>
+      </article>
+      <article class="log-entry">
+        <div class="log-top">
+          <span class="date">03/03</span>
+          <span class="code-chip" aria-label="文字 K">K</span>
+        </div>
+        <p>保管機器の影に短い走り書き。「記録を直すな」の一文のみ。</p>
+      </article>
+      <article class="log-entry">
+        <div class="log-top">
+          <span class="date">03/09</span>
+          <span class="code-chip" aria-label="文字 T">T</span>
+        </div>
+        <p>検索履歴の末尾だけ欠落。閲覧ページは深層ログ付近に集中している。</p>
+      </article>
+      <article class="log-entry">
+        <div class="log-top">
+          <span class="date">03/10</span>
+          <span class="code-chip" aria-label="文字 A">A</span>
+        </div>
+        <p>最後の行だけ改行位置が不自然。これ以降の正式な更新記録はない。</p>
+      </article>
+      <article class="log-entry">
+        <div class="log-top">
+          <span class="date">03/04</span>
+          <span class="code-chip" aria-label="文字 U">U</span>
+        </div>
+        <p>監視ログに短い停止。停止中に誰かがHTMLを編集した痕跡あり。</p>
+      </article>
+      <article class="log-entry">
+        <div class="log-top">
+          <span class="date">03/06</span>
+          <span class="code-chip" aria-label="文字 A">A</span>
+        </div>
+        <p>別の端末から同一記録に複数回アクセス。削除ではなく退避の動きに近い。</p>
+      </article>
+      <article class="log-entry">
+        <div class="log-top">
+          <span class="date">03/08</span>
+          <span class="code-chip" aria-label="文字 E">E</span>
+        </div>
+        <p>保存領域の空白が増えている。欠落ではなく、何かを避けるように空いている。</p>
+      </article>
+      <article class="log-entry">
+        <div class="log-top">
+          <span class="date">03/02</span>
+          <span class="code-chip" aria-label="文字 A">A</span>
+        </div>
+        <p>管理メモに対象者名が出る直前だけ、フォント色の指定が書き換わっていた。</p>
+      </article>
+      <article class="log-entry">
+        <div class="log-top">
+          <span class="date">03/01</span>
+          <span class="code-chip" aria-label="文字 K">K</span>
+        </div>
+        <p>最初の調査開始日。案件番号AML-07が初めて付与された。</p>
+      </article>
+      <article class="log-entry">
+        <div class="log-top">
+          <span class="date">03/05</span>
+          <span class="code-chip" aria-label="文字 S">S</span>
+        </div>
+        <p>対象者自身が保管庫へアクセスした可能性。応答は短く、すぐ遮断された。</p>
+      </article>
+    </section>
+
+    <section class="puzzle-box">
+      <h2>記録の復元 02</h2>
+      <p>日付順に並べたとき、赤い印が示す語を入力してください。</p>
+      <form
+        class="form-block"
+        data-puzzle-form
+        data-answer="KAKUSARETA|かくされた"
+        data-reveal="#case-next"
+        data-success-key="puzzle2-solved"
+        data-success-message="照合成功。アーカイブ閲覧権限が戻りました。"
+        data-error-message="違います。日付順に整列させてから文字を読んでください。"
+      >
+        <label class="field-label" for="case-answer">並び替えで見えた語</label>
+        <input id="case-answer" name="case-answer" type="text" placeholder="例: 英字">
+        <p class="helper">03/01 から順番に一文字ずつ拾うと、10文字の語になります。</p>
+        <div class="button-row">
+          <button type="submit">照合する</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </form>
+
+      <div data-hints>
+        <button type="button" class="secondary" data-show-hint>ヒントを見る</button>
+        <div class="hint-panel">
+          <p class="hidden" data-hint-step>ヒント1: まず日付を古い順に並べます。</p>
+          <p class="hidden" data-hint-step>ヒント2: 03/01 から 03/10 まで、各ログの赤い印だけを読みます。</p>
+          <p class="hidden" data-hint-step>ヒント3: 答えは `KAKUSARETA` です。</p>
+        </div>
+      </div>
+
+      <div id="case-next" class="hidden">
+        <div class="button-row">
+          <a class="button" href="archive.html">アーカイブを見る</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

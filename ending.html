@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>最終記録 | 失踪記録保管庫</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="ending">
+  <main class="page">
+    <header class="site-header compact">
+      <div>
+        <p class="status-line">record / ending</p>
+        <h1 class="page-title">最終記録</h1>
+      </div>
+      <nav class="archive-nav">
+        <a href="index.html">トップへ戻る</a>
+      </nav>
+    </header>
+
+    <section class="message-box">
+      <h2>復元された文面</h2>
+      <p class="ending-note">
+橘ユウは失踪したのではなかった。
+追ってくる誰かから記録そのものを隠すため、
+自分の足取りとメッセージを複数のページに分散させていた。
+
+誰かに見つけてほしかったのは自分ではなく、改ざんされた痕跡のほうだった。
+記録がつながったなら、もう追跡者は同じ方法でたどれない。
+
+記録はここまででいい。
+      </p>
+      <p>
+        これで本筋は完了です。必要なら最初から見直して、違和感がどこに埋め込まれていたか確認できます。
+      </p>
+    </section>
+
+    <section class="puzzle-box">
+      <h2>追加入力</h2>
+      <p>まだ名前を確かめたいなら、対象者の姓を英字で入力してください。</p>
+      <form class="form-block" data-secret-form data-answer="TACHIBANA" data-output="#secret-message">
+        <label class="field-label" for="secret-answer">追加コード</label>
+        <input id="secret-answer" name="secret-answer" type="text" placeholder="例: 姓を英字で">
+        <div class="button-row">
+          <button type="submit">確認する</button>
+        </div>
+      </form>
+      <div id="secret-message" class="hint-panel hidden">
+        <p>
+          追記: 「名前まで辿りついたなら十分です。これ以上は保管しないでください。」
+        </p>
+      </div>
+    </section>
+
+    <p class="footer-note">END / Archive closed.</p>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
