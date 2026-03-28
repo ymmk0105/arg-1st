@@ -1,22 +1,24 @@
 # AGENTS.md
 
 ## Project
-このリポジトリは、GitHub Pages で公開する短編ARG（Alternate Reality Game）用の静的Webサイトです。
-プレイヤーはブラウザだけで遊べることを前提とします。
+このリポジトリは、Cloudflare Pages で公開する短編ARG（Alternate Reality Game）群と、
+その管理用CMSを扱うプロジェクトです。
+プレイヤーはブラウザだけで遊べることを前提とし、プレイヤー向け公開物は静的サイトとします。
 
 ## Primary goal
 最優先は「実際に最初から最後まで遊べること」です。
 演出の派手さよりも、導線の明確さ、リンク切れ防止、謎解きの成立を優先してください。
 
 ## Technical constraints
-- HTML / CSS / JavaScript のみで実装すること
-- GitHub Pages でそのまま動作する静的サイトにすること
-- Node.js, npm, Vite, Webpack, TypeScript, Sass などのビルド前提構成は禁止
-- サーバーサイド処理は禁止
-- 外部APIは禁止
-- 外部データベースは禁止
-- 依存ライブラリは原則使わない
-- すべて相対パスでリンクすること
+- プレイヤー向け公開物は HTML / CSS / JavaScript で配信すること
+- Cloudflare Pages で公開できる構成にすること
+- プレイヤー向け本編は静的サイトとして成立させること
+- CMS / 管理系では Cloudflare Workers / D1 の利用を許可する
+- Node.js, npm, Vite, Webpack, TypeScript, Sass などは CMS / 生成基盤で必要なら採用可
+- サーバーサイド処理は Cloudflare Workers 上で行うこと
+- 外部APIは必要最小限にとどめ、プレイヤー向け本編の進行に必須としないこと
+- データベースは Cloudflare D1 を前提とする
+- プレイヤー向けページ内リンクは相対パスを基本とすること
 - 画像がなくても最低限成立する構成にすること
 - localStorage は使用可
 
@@ -72,6 +74,7 @@
 - ページ追加時は命名を統一する
 - 不要ファイルを増やしすぎない
 - README.md にセットアップと公開手順を書く
+- D1 migration や CMS 設計資料は用途ごとに整理して配置する
 
 ## Required deliverables
 最低限、以下を作成すること:
@@ -93,7 +96,7 @@
 
 ## Quality check
 完了前に必ず確認すること:
-- GitHub Pages で壊れる構成になっていないか
+- Cloudflare Pages で壊れる構成になっていないか
 - 絶対パスを使っていないか
 - リンク切れがないか
 - 謎が作中情報だけで解けるか
@@ -101,6 +104,7 @@
 - スマホ表示で崩れないか
 - localStorage がなくても最低限遊べるか
 - README.md が公開手順として読めるか
+- CMS / D1 / 公開フローの設計が現行方針と矛盾していないか
 
 ## Output style
 - 変更内容は最後に簡潔に要約すること
